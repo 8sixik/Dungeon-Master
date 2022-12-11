@@ -61,7 +61,15 @@ CTEventManager.register<crafttweaker.api.event.entity.player.interact.MCRightCli
             }
         }
     }
-
+    if(result == <item:kubejs:shield_1>){
+        world.asServerWorld().server.executeCommand("gamerule keepInventory true", true);
+        for i in 0 .. 8 {
+            if(<item:kubejs:shield_1>.matches(inventory.getStackInSlot(i)) && (value)){
+                inventory.getStackInSlot(i).mutable().shrink(1);
+                return;
+            }
+        }
+    }
 });
 
 CTEventManager.register<GameStageAdded>((event) => {
@@ -102,11 +110,13 @@ CTEventManager.register<GameStageAdded>((event) => {
 CTEventManager.register<GameStageRemoved>((event) => {
     var player = event.player;
     var world = player.getWorld();
+    var effect1 = <effect:minecraft:slow_falling>.newInstance(500, 1);
 
     if (event.stage == "have_wings_1m") {
         world.asServerWorld().server.executeCommand("wings take " + player.getName() + " " + "wings:none", true);
         world.asServerWorld().server.executeCommand("wings take " + player.getName() + " " + "wings:angel_wings", true);
         world.asServerWorld().server.executeCommand("wings take " + player.getName() + " " + "wings:dragon_wings", true);
         world.asServerWorld().server.executeCommand("wings take " + player.getName() + " " + "wings:evil_wings", true);
+        player.addPotionEffect(effect1);
     }
 });

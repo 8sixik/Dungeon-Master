@@ -9,6 +9,7 @@ onEvent('jei.hide.items', event => {
 
 onEvent('ui.main_menu', event => {
 
+/*
 var currentdate = new Date();
 var datetime = "Last Sync: " + currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/"
@@ -84,4 +85,5 @@ function adminmenu() {
         })
       })
 }
+*/
 })

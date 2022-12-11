@@ -140,10 +140,18 @@ CTEventManager.register<GameStageAdded>((event) => {
        "29" : <item:artifacts:pocket_piston>.mutable()
     } as IItemStack[string];
 
-    var wing_1 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Крыльевый Талисман\"" as string}});
-    var wing_2 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 2 as int, display: {Name: "\"Крыльевый Талисман Невинного\"" as string}});
-    var wing_3 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Крыльевый Талисман Мужественного\"" as string}});
-    var wing_4 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 4 as int, display: {Name: "\"Крыльевый Талисман Сумасшедшего\"" as string}});
+    var wing_1 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"\u041a\u0440\u044b\u043b\u044c\u0435\u0432\u044b\u0439 \u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d\"" as string}});
+    var wing_2 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 2 as int, display: {Name: "\"\u041a\u0440\u044b\u043b\u044c\u0435\u0432\u044b\u0439 \u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d \u041d\u0435\u0432\u0438\u043d\u043d\u043e\u0433\u043e\"" as string}});
+    var wing_3 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"\u041a\u0440\u044b\u043b\u044c\u0435\u0432\u044b\u0439 \u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d \u041c\u0443\u0436\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0433\u043e\"" as string}});
+    var wing_4 = <item:kubejs:fly_talisman>.withTag({RepairCost: 0 as int, Mode: 4 as int, display: {Name: "\"\u041a\u0440\u044b\u043b\u044c\u0435\u0432\u044b\u0439 \u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d \u0421\u0443\u043c\u0430\u0441\u0448\u0435\u0434\u0448\u0435\u0433\u043e\"" as string}});
+
+    var dopitemshardd as IItemStack[] = [
+        <item:minecraft:stone_sword>.withTag({"apoth.rarity": "EPIC" as string, Affixes: {"apotheosis:cold_damage": 5.3343096 as float, "apotheosis:damage_chain": 7.97043 as float, "apotheosis:reach_distance": 0.83833104 as float}, display: {Lore: ["{\"italic\":true,\"color\":\"#BB00BB\",\"translate\":\"rarity.apoth.epic\"}" as string], Name: "{\"translate\":\"%s\",\"with\":[{\"italic\":false,\"color\":\"#BB00BB\",\"translate\":\"affix.apotheosis:damage_chain\",\"with\":[{\"translate\":\"affix.apotheosis:reach_distance\",\"with\":[{\"translate\":\"affix.apotheosis:cold_damage\",\"with\":[{\"translate\":\"item.minecraft.iron_sword\"}]}]}]}]}" as string}}),
+        <item:advancedcombat:stone_helmet>.withTag({"apoth.rarity": "EPIC" as string, Affixes: {"apotheosis:armor": 3.8832393 as float, "apotheosis:max_health": 3.918827 as float, "apotheosis:armor_toughness": 1.4848508 as float}, display: {Lore: ["{\"italic\":true,\"color\":\"#BB00BB\",\"translate\":\"rarity.apoth.epic\"}" as string], Name: "{\"translate\":\"%s\",\"with\":[{\"italic\":false,\"color\":\"#BB00BB\",\"translate\":\"affix.apotheosis:armor\",\"with\":[{\"translate\":\"affix.apotheosis:max_health\",\"with\":[{\"translate\":\"affix.apotheosis:armor_toughness\",\"with\":[{\"translate\":\"item.minecraft.diamond_helmet\"}]}]}]}]}" as string}}),
+        <item:advancedcombat:stone_chestplate>.withTag({"apoth.rarity": "EPIC" as string, Affixes: {"apotheosis:armor": 1.3420973 as float, "apotheosis:max_health": 3.4055204 as float, "apotheosis:enchantability": 14.0 as float}, display: {Lore: ["{\"italic\":true,\"color\":\"#BB00BB\",\"translate\":\"rarity.apoth.epic\"}" as string], Name: "{\"translate\":\"%s\",\"with\":[{\"italic\":false,\"color\":\"#BB00BB\",\"translate\":\"affix.apotheosis:armor\",\"with\":[{\"translate\":\"affix.apotheosis:max_health\",\"with\":[{\"translate\":\"affix.apotheosis:enchantability\",\"with\":[{\"translate\":\"item.minecraft.iron_chestplate\"}]}]}]}]}" as string}}),
+        <item:advancedcombat:stone_leggings>.withTag({"apoth.rarity": "EPIC" as string, Affixes: {"apotheosis:armor": 2.975256 as float, "apotheosis:max_health": 2.5327816 as float, "apotheosis:armor_toughness": 1.5196208 as float}, display: {Lore: ["{\"italic\":true,\"color\":\"#BB00BB\",\"translate\":\"rarity.apoth.epic\"}" as string], Name: "{\"translate\":\"%s\",\"with\":[{\"italic\":false,\"color\":\"#BB00BB\",\"translate\":\"affix.apotheosis:armor\",\"with\":[{\"translate\":\"affix.apotheosis:max_health\",\"with\":[{\"translate\":\"affix.apotheosis:armor_toughness\",\"with\":[{\"translate\":\"item.minecraft.iron_leggings\"}]}]}]}]}" as string}}),
+        <item:advancedcombat:stone_boots>.withTag({"apoth.rarity": "EPIC" as string, Affixes: {"apotheosis:armor": 2.0081966 as float, "apotheosis:max_health": 1.5849526 as float, "apotheosis:armor_toughness": 1.6237656 as float}, display: {Lore: ["{\"italic\":true,\"color\":\"#BB00BB\",\"translate\":\"rarity.apoth.epic\"}" as string], Name: "{\"translate\":\"%s\",\"with\":[{\"italic\":false,\"color\":\"#BB00BB\",\"translate\":\"affix.apotheosis:armor\",\"with\":[{\"translate\":\"affix.apotheosis:max_health\",\"with\":[{\"translate\":\"affix.apotheosis:armor_toughness\",\"with\":[{\"translate\":\"item.minecraft.iron_boots\"}]}]}]}]}" as string}})
+    ];
 
     //------------------------------------------------------------------------------------------------------------------//
 
@@ -177,8 +185,8 @@ CTEventManager.register<GameStageAdded>((event) => {
         player.give(items_1[num]);
         player.give(wing_1);
         player.give(artefacts[num_1]);
+        
         player.give(artefacts[num_2]);
-        easy_tools();
     }
     if (stage == "medium_mode"){
         var medium_sounds = world.random.nextInt(1,4);
@@ -201,6 +209,7 @@ CTEventManager.register<GameStageAdded>((event) => {
         player.sendMessage("Монстры не будут спавниться 10 минут");
         player.give(items_1[num]);
         player.give(wing_2);
+        
         player.give(artefacts[num_1]);
     }
     if (stage == "hard_mode"){
@@ -220,13 +229,17 @@ CTEventManager.register<GameStageAdded>((event) => {
         world.asServerWorld().server.executeCommand("gamerule keepInventory false", true);
         world.asServerWorld().server.executeCommand("vdm activate Hardened ", true);
         world.asServerWorld().server.executeCommand("vdm deactivate fatigue ", true);
+        world.asServerWorld().server.executeCommand("vdm deactivate blackeye", true);
         player.addGameStage("5_min");
         inventory.clear();
         player.sendMessage("Вы выбрали Hard Mode");
         player.sendMessage("Монстры не будут спавниться 5 минут");
         player.give(items_1[num]);
+        for item in dopitemshardd {
+            player.give(item);
+        }
+        
         player.give(wing_3);
-        hard_tools();
     }
     if (stage == "hard+_mode"){
         var hardd_sounds = world.random.nextInt(1,4);
@@ -247,29 +260,36 @@ CTEventManager.register<GameStageAdded>((event) => {
         world.asServerWorld().server.executeCommand("vdm deactivate fatigue", true);
         world.asServerWorld().server.executeCommand("vdm deactivate karmicjustice", true);
         world.asServerWorld().server.executeCommand("vdm deactivate vegetarian", true);
+        world.asServerWorld().server.executeCommand("vdm deactivate blackeye", true);
         world.asServerWorld().server.executeCommand("gamerule keepInventory false", true);
         inventory.clear();
         player.sendMessage("Вы выбрали Hard+ Mode");
+        world.asServerWorld().server.executeCommand("time set 23500", true);
         player.sendMessage("§4Монстры жаждут вашей крови !");
         player.give(items_1[num]);
         player.give(wing_4);
         player.give(<item:enigmaticlegacy:cursed_ring>);
-        hard_tools();
+        for item in dopitemshardd {
+            player.give(item);
+        }
     }
     if (stage == "dificult_easy"){
         world.asServerWorld().server.executeCommand("difficulty easy", true);
+        world.asServerWorld().server.executeCommand("time set 23500", true);
         player.sendMessage("онстры лениво вылазят на охоту");
         player.removeGameStage("dificult_easy");
         player.removeGameStage("15_min");
     }
     if (stage == "dificult_medium"){
         world.asServerWorld().server.executeCommand("difficulty normal", true);
+        world.asServerWorld().server.executeCommand("time set 23500", true);
         player.sendMessage("Монстры вылазят из пещер на охоту");
         player.removeGameStage("dificult_medium");
         player.removeGameStage("10_min");
     }
     if (stage == "dificult_hard"){
         world.asServerWorld().server.executeCommand("difficulty hard", true);
+        world.asServerWorld().server.executeCommand("time set 23500", true);
         player.sendMessage("Монстры вышли на охоту");
         player.removeGameStage("dificult_hard");
         player.removeGameStage("5_min");

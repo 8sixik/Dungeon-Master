@@ -36,10 +36,10 @@ public function playerin_1() as void {
     var random_complication = <item:divinerpg:quadrotic_lump>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Rebirth §kRandom\"" as string}});
 
     var giveitems as IItemStack[] = [
-        <item:aoa3:green_crystal>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Easy Mode\"" as string}}),
-        <item:aoa3:yellow_crystal>.withTag({RepairCost: 0 as int, Mode: 2 as int, display: {Name: "\"Medium Mode\"" as string}}),
-        <item:aoa3:red_crystal>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard Mode\"" as string}}),
-        <item:aoa3:red_crystal>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard+ Mode\"" as string}}),
+        <item:kubejs:easy>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Easy Mode\"" as string}}),
+        <item:kubejs:medium>.withTag({RepairCost: 0 as int, Mode: 2 as int, display: {Name: "\"Medium Mode\"" as string}}),
+        <item:kubejs:hard>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard Mode\"" as string}}),
+        <item:kubejs:hard_>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard+ Mode\"" as string}}),
         <item:minecraft:book>.withTag({Info: 1 as int, display: {Name: "\"Info §6Multiplayer\"" as string}})
     ];
 
@@ -54,15 +54,6 @@ public function playerin_1() as void {
         var stage_3 = player.hasGameStage("hard_mode");
         var stage_4 = player.hasGameStage("hard+_mode");
 
-        if(stage_1) {
-            easy_tools();
-        }
-        if(stage_3) {
-            hard_tools();
-        }
-        if(stage_4) {
-            hard_tools();
-        }
         if(!stage_1 && !stage_2 && !stage_3 && !stage_4) {
             player.clearGameStages();
             player.addGameStage("ru_info");
@@ -83,8 +74,7 @@ public function playerin_1() as void {
             world.asServerWorld().server.executeCommand("vdm deactivate vegetarian", true);
 
             player.sendStatusMessage("DEBUG MESSAGE !", false);
-            player.sendStatusMessage(world.dimension, false);
-            player.sendStatusMessage(world.dimension, false);
+            player.sendStatusMessage("Pack: " + Version.PACK_VERSION, false);
             for item in giveitems {
                 inventory.addIItemStackToInventory(item);
             }

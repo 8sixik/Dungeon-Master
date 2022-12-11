@@ -9,10 +9,10 @@ import crafttweaker.api.item.IItemStack;
 
 public class IT {
     public static var iron as IItemStack = <item:minecraft:iron_ingot>;
-    public static var mode_1 as IItemStack = <item:aoa3:green_crystal>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Easy Mode\"" as string}});
-    public static var mode_2 as IItemStack = <item:aoa3:yellow_crystal>.withTag({RepairCost: 0 as int, Mode: 2 as int, display: {Name: "\"Medium Mode\"" as string}});
-    public static var mode_3 as IItemStack = <item:aoa3:red_crystal>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard Mode\"" as string}});
-    public static var mode_4 as IItemStack = <item:aoa3:red_crystal>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard+ Mode\"" as string}});
+    public static var mode_1 as IItemStack = <item:kubejs:easy>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Easy Mode\"" as string}});
+    public static var mode_2 as IItemStack = <item:kubejs:medium>.withTag({RepairCost: 0 as int, Mode: 2 as int, display: {Name: "\"Medium Mode\"" as string}});
+    public static var mode_3 as IItemStack = <item:kubejs:hard>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard Mode\"" as string}});
+    public static var mode_4 as IItemStack = <item:kubejs:hard_>.withTag({RepairCost: 0 as int, Mode: 3 as int, display: {Name: "\"Hard+ Mode\"" as string}});
 
     public static var dim_1 as IItemStack = <item:divinerpg:watching_eye>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Rebirth in §1The End\"" as string}});
     public static var dim_2 as IItemStack = <item:divinerpg:legendary_ender_eye>.withTag({RepairCost: 0 as int, Mode: 1 as int, display: {Name: "\"Rebirth in §1The End+\"" as string}});

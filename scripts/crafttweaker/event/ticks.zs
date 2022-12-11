@@ -37,6 +37,14 @@ public function tickevent_1() as void {
             player.addPotionEffect(effect2);
             player.addPotionEffect(effect3);
          }
+         /*
+         if(player.hasGameStage("hard+_mode")){
+            if(player.isCreative()){
+                world.asServerWorld().server.executeCommand("gamemode survival " +  name, true);
+                player.sendStatusMessage("Креатив ? Не смеши меня ! Ты в Hard+ щенок !", false);
+            }
+         }
+         */
     });
 
 }
